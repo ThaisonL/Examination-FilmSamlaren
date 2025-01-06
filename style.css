@@ -9,38 +9,36 @@ body {
 /* Header */
 header {
   text-align: center;
-  color: #ffffff; /* Mörkare text för bättre kontrast */
+  color: #ffffff;
   padding: 10px;
-  background-color: #585858; /* Ljus bakgrund för hög kontrast */
+  background-color: #585858;
   max-width: 100%;
 }
 
 /* Movie List */
 #movie-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Fem kolumner */
-  gap: 20px; /* Utrymme mellan korten */
-  justify-content: center; /* Centrera hela grid-layouten horisontellt */
-  justify-items: center; /* Centrera individuella kort horisontellt */
-  align-items: center; /* Centrera individuella kort vertikalt */
-  padding: 20px; /* Jämnt avstånd runt grid */
-  margin: 0 auto; /* Centrera grid på sidan */
-  max-width: calc(
-    5 * 200px + 4 * 20px
-  ); /* Dynamisk bredd baserat på kort och gap */
-  box-sizing: border-box; /* Ta hänsyn till padding */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: calc(5 * 200px + 4 * 20px);
+  box-sizing: border-box;
 }
 
 /* Movie Cards */
 .movie-card {
   position: relative;
   margin: 10px;
-  width: 100%; /* Gör korten responsiva */
-  max-width: 200px; /* Maximal bredd */
+  width: 100%;
+  max-width: 200px;
   height: 300px;
   cursor: pointer;
   transition: transform 0.3s ease;
-  border-radius: 10px; /* Rundade hörn för ett mjukare utseende */
+  border-radius: 10px;
 }
 
 .movie-card:hover {
@@ -65,7 +63,7 @@ header {
   padding: 10px;
   opacity: 0;
   transition: opacity 0.3s ease;
-  border-bottom-left-radius: 10px; /* Rundade hörn för info-fönstret */
+  border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
@@ -73,7 +71,6 @@ header {
   opacity: 1;
 }
 
-/* Movie Details */
 /* Movie Details */
 #movie-details {
   position: fixed;
@@ -84,26 +81,26 @@ header {
   background: rgba(0, 0, 0, 0.7);
   color: rgb(255, 255, 255);
   display: flex;
-  justify-content: center; /* Centrera innehållet horisontellt */
-  align-items: center; /* Centrera innehållet vertikalt */
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
 /* Content */
 #movie-details .content {
   padding: 20px;
-  border-radius: 10px; /* Rundade hörn för fönstret */
-  max-width: 600px; /* Maxbredd på innehållsfönstret */
+  border-radius: 10px;
+  max-width: 600px;
   width: 100%;
-  margin: 0 auto; /* Centrera innehållet horisontellt */
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Justera all text och bild centralt */
+  align-items: center;
 }
 
 /* Image inside movie details */
 #movie-details img {
-  max-width: 100%; /* Gör att bilden inte blir större än innehållsfönstret */
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -113,7 +110,7 @@ header {
 #movie-details h2,
 #movie-details p {
   margin: 10px 0;
-  text-align: center; /* Se till att texten är centrerad */
+  text-align: center;
 }
 
 #details-description {
@@ -144,58 +141,88 @@ header {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 400px; /* Maxbredd för formuläret */
-  margin: 0 auto; /* Centrera formuläret horisontellt */
+  max-width: 400px;
+  margin: 0 auto;
   text-align: center;
-  background-color: #ffffff; /* Ljus bakgrund för hög kontrast */
+  background-color: #ffffff;
   padding: 20px;
-  border-radius: 10px; /* Rundade hörn */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Liten skugga för att fånga uppmärksamhet */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Label för sökfält */
+/* Label for search field */
 #search-form label {
   font-weight: bold;
-  font-size: 18px; /* Minska storlek för bättre läsbarhet */
-  color: #212121; /* Mörkare text */
+  font-size: 18px;
+  color: #212121;
 }
 
-/* Inputfält */
+/* Input field */
 #search-form input {
   padding: 10px;
   font-size: 16px;
-  width: 100%; /* Gör så att inputfältet fyller hela bredden på formuläret */
-  box-sizing: border-box; /* Gör så att padding ingår i bredden */
+  width: 100%;
+  box-sizing: border-box;
   border-radius: 25px;
   text-align: center;
-  border: 2px solid #333; /* Tydlig gräns */
-  background-color: #f0f0f0; /* Ljus bakgrund */
+  border: 2px solid #333;
+  background-color: #f0f0f0;
 }
 
 #search-form input:focus {
   outline: none;
-  border-color: #6200ea; /* Fokusfärg */
-  background-color: #e8f0fe; /* Ljus bakgrund vid fokus */
+  border-color: #6200ea;
+  background-color: #e8f0fe;
 }
 
-/* Sökknapp */
+/* Search button */
 #search-button {
   padding: 10px;
   font-size: 16px;
   width: 100%;
   border-radius: 25px;
   box-sizing: border-box;
-  background-color: #6200ea; /* Lila för knapp */
+  background-color: #6200ea;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 #search-button:hover {
-  background-color: #3700b3; /* Mörkare lila vid hover */
+  background-color: #3700b3;
 }
 
 #search-button:focus {
   outline: none;
-  border-color: #3700b3; /* Fokusfärg för knappen */
+  border-color: #3700b3;
+}
+
+.no-results {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  z-index: 10;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.fetch-error {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  z-index: 10;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
 }
